@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link href="../../css/mui.css" rel="stylesheet" />
+		<link href="../../css/main.css" rel="stylesheet" />
+		<link href="../../css/icon.css" rel="stylesheet" />
+		<link href="../../css/style.css" rel="stylesheet" />
+		<link href="../../css/bills.css" rel="stylesheet" />
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js "></script>
+		<!-- 图片预览 -->
+		<link rel="stylesheet" href="../../css/mui.imageviewer.css" />
+	</head>
+	<body>
+		<!-- <div class="loading" :catchtouchmove="true">
+			<div class="feedback">
+			</div>
+			<span class="flex justify-center text-xl text-gray">暂无票据</span>
+			<span class="flex text-xsl text-gray padding-lr-xl margin-top-sm text-center">
+				电子票据将在订单完成后24小时内开据,
+				也可前往"电子票夹"小程序查询您的票据凭证
+			</span>
+		</div> -->
+		<div class="margin-top-sm" style="height: 300px;">
+			<img class="img" src="../../images/piaoju.png" style="width: 100%;" data-preview-src="" data-preview-group="4" />
+		</div>
+		<div class="margin-sm padding-sm radius50 text-lg text-center bg-lobby-linear" id="imgsul">
+			<div class="save">保存图片</div>
+		</div>
+		<!--弹框的div-->
+		<div id="picture" class="mui-popover mui-popover-action mui-popover-bottom text-df" style="z-index: 99999999">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a href="javascript:;" id="saveImg">保存图片到相册</a>
+				</li>
+			</ul>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a href="#picture">取消保存</a>
+				</li>
+			</ul>
+		</div>
+		<script src="../../js/mui.js"></script>
+		<script type="text/javascript" src="../../js/mui.imageViewer.js"></script>
+		<script type="text/javascript" src="../../js/mui.previewimage.js"></script>
+		<script type="text/javascript" src="../../js/mui.zoom.js"></script>
+		<script type="text/javascript" src="../../js/constUtil.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			//开启预览图片
+			mui.previewImage();
+			mui.plusReady(function() {
+				imageDetail.init();
+			})
+			
+			//点击触发事件
+			mui("#imgsul").on('tap', ".save", function() {
+				// alert(this.dataset.imgurl);
+				//开启弹框
+				mui('#picture').popover('toggle');
+				var imgurl = this.dataset.imgurl;
+				mui("li").off().on('tap', "#saveImg", function() {
+					// mui.plusReady(function() {
+						var imgDtask = plus.downloader.createDownload(imgurl, {
+							// method: 'GET'
+						}, function(d, status) {
+							if (status == 200) {
+								plus.gallery.save(d.filename, function() { //保存到相册
+									plus.io.resolveLocalFileSystemURL(d.filename, function(enpty) {
+										// 关闭弹框
+										mui('#picture').popover('toggle');
+										mui.toast('保存成功')
+									});
+								})
+							} else {
+								mui.toast('保存失败')
+							}
+						});
+						imgDtask.start();
+					// })
+				});
+			})
+		</script>
+	</body>
+</html>

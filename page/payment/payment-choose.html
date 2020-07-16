@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link href="../../css/mui.css" rel="stylesheet" />
+		<link href="../../css/main.css" rel="stylesheet" />
+		<link href="../../css/icon.css" rel="stylesheet" />
+		<link href="../../css/style.css" rel="stylesheet" />
+		<link href="../../css/payment.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<div class="top-bg-choose">
+			<div class="" id="imgBg"></div>
+			<div class="img-box">
+				<img src="../../images/bg-img.png" style="width: 86%;margin-left:5%;" align="center" />
+			</div>
+			<div class="info-box-choose bg-white radius30">
+				<!-- 用户信息 -->
+				<div class="flex align-center padding-sm">
+					<div class="Image round">
+						<img class="Image round" src="../../images/avant.png" />
+					</div>
+					<div class="flex-treble margin-left-sm">
+						<div class="flex align-center text-df">
+							<div class="flex-treble text-lg text-bold">李晓丽</div>
+						</div>
+						<div class="flex align-center">
+							<div class="flex-treble text-sm">
+								<span>学号:</span> <span class="margin-left-xs">20182010242</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 缴费信息 -->
+		<div style="height: 20px;"></div>
+		<div class="info bg-white margin-xs margin-top-sm radius30 padding-sm">
+			<div class="margin-top-xs padding-xs">
+				<div class="flex justify-between text-df text-bold">
+					<div class="flex">
+						<div class="title-box"></div>缴费信息
+					</div>
+				</div>
+				<div class="margin-top-sm margin-left-sm">
+					<div class="flex text-sm">
+						<div class="flex-twice">
+							缴费项目
+						</div>
+						<div class="flex-sub">学分费></div>
+						<div class="flex-sub"></div>
+						<div style="width: 50px;"></div>
+					</div>
+					<div class="flex text-sm margin-top-xs">
+						<div class="flex-twice">
+							课程名称
+						</div>
+						<div class="flex-sub">学分</div>
+						<div class="flex-sub">学分费</div>
+						<div style="width: 50px;"></div>
+					</div>
+					<div class="flex text-sm margin-top-xs">
+						<div class="flex-twice">
+							高等数学
+						</div>
+						<div class="flex-sub">2</div>
+						<div class="flex-sub">200</div>
+						<div class="flex justify-center" style="width: 50px;">
+							<div class="mui-input-row mui-radio">
+							    <input name="radio1" type="radio">
+							</div>
+						</div>
+					</div>
+					<div class="flex text-sm margin-top-xs">
+						<div class="flex-twice">
+							数字电路与数字逻辑
+						</div>
+						<div class="flex-sub">4</div>
+						<div class="flex-sub">400</div>
+						<div class="flex justify-center" style="width: 50px;">
+							<div class="mui-input-row mui-radio">
+							    <input name="radio1" type="radio">
+							</div>
+						</div>
+					</div>
+					<div class="flex text-sm margin-top-xs">
+						<div class="flex-twice">
+							体育
+						</div>
+						<div class="flex-sub">2</div>
+						<div class="flex-sub">200</div>
+						<div class="flex justify-center" style="width: 50px;">
+							<div class="mui-input-row mui-radio">
+							    <input name="radio1" type="radio">
+							</div>
+						</div>
+					</div>
+					<div class="flex text-sm margin-top-xs">
+						<div class="flex-twice">
+							造价BIM软件应用
+						</div>
+						<div class="flex-sub">3</div>
+						<div class="flex-sub">300</div>
+						<div class="flex justify-center" style="width: 50px;">
+							<div class="mui-input-row mui-radio">
+							    <input name="radio1" type="radio">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 注意事项 -->
+			<div class="margin-top-xs padding-xs">
+				<div class="flex justify-between text-df text-bold">
+					<div class="flex">
+						<div class="title-box"></div>注意事项
+					</div>
+				</div>
+				<div class="margin-top-sm">
+					<div class="flex margin-left-sm align-center text-sm">
+						<p class="text-indent">这是一段注意事项内容的这是一段注意事项内容的这是一段注意事项内容的这是一段注意事项内容的这是一段注意事项内容的这是一段注意事项内容的</p>
+					</div>
+				</div>
+			</div>
+			<!-- 合计金额 -->
+			<div class="margin-top padding-xs">
+				<div class="flex justify-end text-df">
+					合计金额:<label class="margin-left-xs text-bold text-green" style="min-width: 60px;color:#f29e33">
+						￥25:00</label>
+				</div>
+			</div>
+			<div class="margin-xs margin-top-sm margin-bottom-sm padding-sm 
+				radius50 text-lg text-center bg-lobby-linear">
+				确认提交
+			</div>
+		</div>
+		<script type="text/javascript">
+			mui.init()
+			// 设置水印背景图
+			window.onload = function() {
+				var odiv = document.getElementById("imgBg");
+				console.log("odiv", odiv)
+				odiv.style.position = "absolute";
+				odiv.style.backgroundRepeat = "no-repeat";
+				odiv.style.backgroundSize = "26%";
+				// odiv.style.z-index=9;
+				odiv.style.top = "10px";
+				odiv.style.right = 0;
+				odiv.style.left = "10px";
+				odiv.style.bottom = 0;
+				odiv.style.backgroundImage = "url('../../images/10673.png')";
+			}
+		</script>
+	</body>
+</html>

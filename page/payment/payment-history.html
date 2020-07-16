@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link href="../../css/mui.css" rel="stylesheet" />
+		<link href="../../css/main.css" rel="stylesheet" />
+		<link href="../../css/icon.css" rel="stylesheet" />
+		<link href="../../css/style.css" rel="stylesheet" />
+		<link href="../../css/payment.css" rel="stylesheet" />
+		<style>
+			.info{
+				position: absolute;
+				top:70%
+			}
+		</style>
+	</head>
+
+	<body style="background: #E8E8E8;">
+		<div class="top-bg bg-lobby-linear">
+			<div class="" id="imgBg"></div>
+			<div class="img-box">
+				<img src="../../images/bg-img.png" style="width: 100%;" />
+			</div>
+
+			<!-- 缴费信息 -->
+			<!-- 占位符 -->
+			<div class="info margin-top-sm padding-sm" style="width: calc(100%);">
+				<div class="radius30 bg-white padding-sm">
+					<!-- 如果没有数据时显示 -->
+					<!-- <div class="flex justify-center padding-top-xl text-gray margin-top-xs" style="min-height: 200px;">
+						--暂无缴费历史--
+					</div> -->
+					<div class="study-lobby padding-sm padding-left-none border-bottom pos-relative">
+						<a href="../pay/pay-details.html" style="color: #444444;">
+							<div class="flex study-lobby-item">
+								<div class="flex justify-between flex-twice">
+									<div class="flex-treble">
+										<div class="flex">
+											<div class="flex text-lg">课程费课</div>
+										</div>
+										<div class="text-gray text-sm">
+											缴费时间:2020-06-20 12:05:06
+										</div>
+									</div>
+									<div class="flex align-center padding-left-xl">
+										<div class="flex text-red">
+											<span class="text-df">￥</span>
+											<span class="text-xl">230</span>
+										</div>
+									</div>
+								</div>
+								<div class="flex align-center justify-center text-xs cuIcon-right" style="font-size: 18px;">
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="study-lobby padding-sm padding-left-none border-bottom pos-relative">
+						<div class="flex study-lobby-item">
+							<div class="flex justify-between flex-twice">
+								<div class="flex-treble">
+									<div class="flex">
+										<div class="flex text-lg">课程费课程费课程费课程费</div>
+									</div>
+									<div class="text-gray text-sm">
+										缴费时间:2020-06-20 12:05:06
+									</div>
+								</div>
+								<div class="flex align-center padding-left-xl">
+									<div class="flex text-red">
+										<span class="text-df">￥</span>
+										<span class="text-xl">230</span>
+									</div>
+								</div>
+							</div>
+							<div class="flex align-center justify-center text-xs cuIcon-right" style="font-size: 18px;">
+							</div>
+						</div>
+					</div>
+					<div class="study-lobby padding-sm padding-left-none border-bottom pos-relative">
+						<div class="flex study-lobby-item">
+							<div class="flex justify-between flex-twice">
+								<div class="flex-treble">
+									<div class="flex">
+										<div class="flex text-lg">课程费课程费课程费课程费</div>
+									</div>
+									<div class="text-gray text-sm">
+										缴费时间:2020-06-20 12:05:06
+									</div>
+								</div>
+								<div class="flex align-center padding-left-xl">
+									<div class="flex text-red">
+										<span class="text-df">￥</span>
+										<span class="text-xl">230</span>
+									</div>
+								</div>
+							</div>
+							<div class="flex align-center justify-center text-xs cuIcon-right" style="font-size: 18px;">
+							</div>
+						</div>
+					</div>
+					<div class="study-lobby padding-sm padding-left-none border-bottom pos-relative">
+						<div class="flex study-lobby-item">
+							<div class="flex justify-between flex-twice">
+								<div class="flex-treble">
+									<div class="flex">
+										<div class="flex text-lg">课程费课程费课程费课程费</div>
+									</div>
+									<div class="text-gray text-sm">
+										缴费时间:2020-06-20 12:05:06
+									</div>
+								</div>
+								<div class="flex align-center padding-left-xl">
+									<div class="flex text-red">
+										<span class="text-df">￥</span>
+										<span class="text-xl">230</span>
+									</div>
+								</div>
+							</div>
+							<div class="flex align-center justify-center text-xs cuIcon-right" style="font-size: 18px;">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			// 设置水印背景图
+			window.onload = function() {
+				var odiv = document.getElementById("imgBg");
+				console.log("odiv", odiv)
+				odiv.style.position = "absolute";
+				odiv.style.backgroundRepeat = "no-repeat";
+				odiv.style.backgroundSize = "26%";
+				// odiv.style.z-index=9;
+				odiv.style.top = "10px";
+				odiv.style.right = 0;
+				odiv.style.left = "10px";
+				odiv.style.bottom = 0;
+				odiv.style.backgroundImage = "url('../../images/10673.png')";
+			}
+		</script>
+	</body>
+
+</html>

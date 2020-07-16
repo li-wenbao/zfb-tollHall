@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="./css/icon.css" rel="stylesheet" />
+		<style>
+			*{touch-action: none;} 
+		</style>
+	</head>
+	<body onload="load()">
+		<nav class="mui-bar mui-bar-tab">
+			<a href="page/lobby/index.html" class="mui-tab-item mui-active text-appcolor" id="defaultTab">
+				<span class="mui-icon mui-icon-home"></span>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<a href="page/payment/payment-history.html" class="mui-tab-item">
+				<span class="mui-icon cuIcon-time"></span>
+				<span class="mui-tab-label">历史</span>
+			</a>
+		</nav>
+	</body>
+	<script src="js/mui.min.js"></script>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript">
+		//启用双击监听
+		mui.init({
+			gestureConfig: {
+				doubletap: true
+			},
+			subpages: [{
+				url: 'page/lobby/index.html',
+				id: 'MainViwe',
+				styles: {
+					top: '0px',
+					bottom: '51px'
+				},
+			}]
+		});
+
+		mui('.mui-scroll-wrapper').scroll({
+			deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+		});
+
+		//底部选项卡切换跳转
+		function load() {
+			//跳转页面
+			var subpages = ['page/lobby/index.html', 'page/payment/payment-history.html'];
+			var subpage_style = {
+				top: '0px',
+				bottom: '51px'
+			};
+			var Index = 0;
+			var actTab = subpages[Index],
+				tittle = document.querySelector('.mui-title');
+			var aniShow = {}; //动画显示
+
+			//首次启动切滑效果
+			//当前激活选项
+			var activeTab = subpages[0];
+			//选项卡点击事件
+			mui('.mui-bar-tab').on('tap', 'a', function(e) {
+				//修改对应分页
+				var targetTab = this.getAttribute('href');
+				$('#MainViwe').attr('src', targetTab);
+			});
+			//自定义事件，模拟点击“首页选项卡”
+			var defaultTab = document.getElementById("defaultTab");
+			//模拟首页点击
+			mui.trigger(defaultTab, 'tap');
+			//切换选项卡高亮
+			var current = document.querySelector(".mui-bar-tab>.mui-tab-item.mui-active");
+			if (defaultTab !== current) {
+				current.classList.remove('mui-active');
+				defaultTab.classList.add('mui-active');
+			}
+		}
+	</script>
+</html>

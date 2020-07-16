@@ -1,0 +1,191 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link href="../../css/mui.css" rel="stylesheet" />
+		<link href="../../css/main.css" rel="stylesheet" />
+		<link href="../../css/icon.css" rel="stylesheet" />
+		<link href="../../css/style.css" rel="stylesheet" />
+		<link href="../../css/payment.css" rel="stylesheet" />
+		<style>
+			.img-responsive {
+			  display: flex;
+			  height: auto;
+			  max-width: 100%;
+			  justify-content: center;
+			  align-self: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="top-bg-choose bg-lobby-linear">
+			<div class="" id="imgBg"></div>
+			<div class="img-box flex justify-end">
+				<img src="../../images/bg-img.png" class="img-responsive" style="width: 86%;margin-left:5%;" align="center" />
+			</div>
+			<div class="info-box-choose bg-white radius30">
+				<!-- 用户信息 -->
+				<div class="flex align-center padding-sm">
+					<div class="Image round">
+						<img class="Image round" src="../../images/avant.png" />
+					</div>
+					<div class="flex-treble margin-left-sm">
+						<div class="flex align-center text-df">
+							<div class="flex-treble text-lg text-bold">李晓丽</div>
+						</div>
+						<div class="flex align-center">
+							<div class="flex-treble text-sm">
+								<span>学号:</span> <span class="margin-left-xs">20182010242</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 缴费信息 -->
+		<!-- 占位符 -->
+		<div style="height: 20px;"></div>
+		<div class="info bg-white margin-xs margin-top-sm radius30 padding-sm">
+			<div class="margin-top-xs padding-xs">
+				<div class="flex justify-between text-df text-bold toddy-name">
+					<div class="flex">
+						<div class="title-box"></div>缴费信息
+					</div>
+					<div class="info-dtils text-sm" id="dtails">
+						详情>
+					</div>
+				</div>
+				<div class="margin-top-sm">
+					<div class="flex margin-left-sm text-sm">
+						<div class="">
+							缴费项目
+						</div>
+						<div class="margin-left-sm">学费</div>
+					</div>
+					<div class="flex margin-left-sm text-sm">
+						<div class="">
+							缴费金额
+						</div>
+						<div class="margin-left-sm">25元</div>
+					</div>
+				</div>
+			</div>
+			<!-- 补充信息 -->
+			<div class="margin-top padding-xs">
+				<div class="flex justify-between text-df text-bold">
+					<div class="flex">
+						<div class="title-box"></div>补充信息
+					</div>
+				</div>
+				<div class="margin-top-sm">
+					<div class="flex margin-left-sm align-center text-sm">
+						<div class="flex flex-sub">
+							姓名:
+						</div>
+						<div class="flex flex-twice">
+							<input class="info-input text-sm" type="text" placeholder="请输入" style="" />
+						</div>
+					</div>
+					<div class="flex margin-left-sm align-center text-sm">
+						<div class="flex flex-sub">
+							学工号或身份证号:
+						</div>
+						<div class="flex flex-twice">
+							<input class="input text-sm" type="number" placeholder="请输入" />
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 注意事项 -->
+			<div class="margin-top padding-xs">
+				<div class="flex justify-between text-df text-bold">
+					<div class="flex">
+						<div class="title-box"></div>注意事项
+					</div>
+				</div>
+				<div class="margin-top-sm">
+					<div class="flex margin-left-sm align-center text-sm">
+						<p>这是一段注意事项内容的这是一段注意事项内容的这是一段注意事项内容的这是一段注意事项内容的这是一段注意事项内容的这是一段注意事项内容的</p>
+					</div>
+				</div>
+			</div>
+			<!-- 合计金额 -->
+			<div class="margin-top padding-xs">
+				<div class="flex justify-end text-df">
+					合计金额:<label class="margin-left-xs text-bold text-green" style="min-width: 60px;color:#f29e33">
+						￥25:00</label>
+				</div>
+			</div>
+			<div class="margin-xs margin-top-sm margin-bottom-sm padding-sm 
+				radius50 text-lg text-center bg-lobby-linear">
+				确认提交
+			</div>
+		</div>
+
+		<!-- 查看项目详情 -->
+		<div>
+			<div class="cartList" style="display: none;" id="xuefei">
+				<div class="bg-white radius20">
+					<div class="flex  padding-sm align-center justify-center text-lg text-bold">项目详情</div>
+					<div class="border-bottom margin-bottom-xs"></div>
+					<div class=" padding-sm" style="max-height:200px;min-height:100px; overflow: auto;">
+						<div class="flex align-center margin-sm margin-top-sm margin-bottom-sm text-df">
+							<div class="flex-sub">姓名</div>
+							<div class="flex-twice text-df">李晓丽</div>
+						</div>
+						<div class="flex align-center margin-sm margin-top-sm margin-bottom-sm text-df">
+							<div class="flex-sub">缴费项目</div>
+							<div class="flex-twice text-df">学分费</div>
+						</div>
+						<div class="flex align-center margin-sm margin-top-sm margin-bottom-sm text-df">
+							<div class="flex-sub">缴费时间</div>
+							<div class="flex-twice text-df">2020-07-04 15:36:48</div>
+						</div>
+					</div>
+					<div class="margin-xs margin-top-sm margin-bottom-sm padding-sm
+						radius50 text-lg text-center bg-lobby-linear"
+					 id="comDetail">
+						确定</div>
+					<div style="height: 10px;"></div>
+				</div>
+			</div>
+			<div class="listMask" style="display: none;" id="listXuefei"></div>
+		</div>
+
+		<script src="../../js/mui.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			// 弹出详情
+			mui('.toddy-name').on('tap', '#dtails', function(event) {
+				console.log("收到贵司的还是")
+				$("#xuefei").css("display", "block"); //显示
+				$("#listXuefei").css("display", "block"); //显示	
+			})
+			//关闭详情 comDetail
+			mui('.bg-white').on('tap', '#comDetail', function(event) {
+				console.log("关闭")
+				$("#xuefei").css("display", "none");
+				$("#listXuefei").css("display", "none");
+			})
+			// 设置水印背景图
+			window.onload = function() {
+				var odiv = document.getElementById("imgBg");
+				console.log("odiv", odiv)
+				odiv.style.position = "absolute";
+				odiv.style.backgroundRepeat = "no-repeat";
+				odiv.style.backgroundSize = "26%";
+				odiv.style.top = "10px";
+				odiv.style.right = 0;
+				odiv.style.left = "10px";
+				odiv.style.bottom = 0;
+				odiv.style.backgroundImage = "url('../../images/10673.png')";
+			}
+		</script>
+	</body>
+
+</html>
